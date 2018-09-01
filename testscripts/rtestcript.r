@@ -21,7 +21,7 @@ power <- function(matrix,num)
 
 transitionState <- function(transitionMatrix)
 {
-    tolerance = 0.00000000001
+    tolerance = 10e-10
     dimMatrix = dim(transitionMatrix)[1]*dim(transitionMatrix)[2]
     initialMatrix = transitionMatrix
     currMatrix = initialMatrix
