@@ -6,4 +6,4 @@ while(nextElement <= (4*10**6)):
     fib.append(nextElement)
     i = i + 1
 evenFib = [x for x in fib if x % 2 == 0]
-sum(evenFib)
+print(sum(evenFib))
