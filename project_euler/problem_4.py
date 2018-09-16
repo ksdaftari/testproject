@@ -1,4 +1,4 @@
-from mylibrary import projecteuler
+from library import projecteuler
 
 initialNums = [9, 0]
 
