@@ -1,4 +1,3 @@
-import math
 from mylibrary import projecteuler
 
 initialNums = [9, 0]
@@ -21,13 +20,6 @@ def constructPalim(array, isMidReflective):
     return(Palim)
 
 
-def getNumberDigits(value):
-    if(value % 10 != 0):
-        return(math.ceil(math.log10(value)))
-    else:
-        return(math.ceil(math.log10(value))+1)
-
-
 def hasMultiplesWithDigits(value, numDigits):
     factors = projecteuler.findPrimeFactors(value)
     factors.sort()
@@ -36,7 +28,7 @@ def hasMultiplesWithDigits(value, numDigits):
     multiples = []
     for factor in factors:
         multiple = multiple*factor
-        currnumDigits = getNumberDigits(multiple)
+        currnumDigits = projecteuler.getNumberDigits(multiple)
         if(currnumDigits == numDigits and numMultipliers < 2):
             multiples.append(multiple)
             numMultipliers = numMultipliers + 1
